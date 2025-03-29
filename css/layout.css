@@ -1,0 +1,1080 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter Tight", sans-serif
+}
+
+.nominee-section {
+    margin: 0 auto;
+    padding: 2rem 0;
+    background-color: white;
+}
+
+.latest {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.latest h5 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.nominee-section__title {
+    font-size: 6rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #222;
+    position: relative;
+}
+
+.nominee-section__subheading {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    color: #353434;
+    line-height: 1.5;
+}
+
+
+.nominees-boxes {
+    display: flex;
+    gap: 25px;
+    margin: 0 5%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nominee-item {
+    flex: 1 1 0;
+    min-width: 300px;
+    max-width: auto;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.nominee-image {
+    width: 100%;
+    display: block;
+    /* check on this */
+}
+
+.nominee-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.vote-button {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    background: white;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nominee-item:hover .vote-button {
+    opacity: 1;
+}
+
+.nominee-item:hover{
+    filter: brightness(90%);
+    transition: all 0.3s;
+}
+
+.website-info {
+    position: absolute;
+    bottom: 35px;
+    left: 20px;
+    color: white;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nominee-item:hover .website-info {
+    opacity: 1;
+}
+
+.website-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.website-name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 15%;
+    justify-content: flex-start;
+    color: white;
+}
+
+.action-icons {
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.website-label__action-icon {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.nominee-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    background: white;
+}
+
+.nominee-name {
+    font-weight: 500;
+}
+
+.agency {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.agency-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.agency-name {
+    font-size: 0.9rem;
+}
+
+.view-nominee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    padding-bottom: 10%;
+}
+
+.view-nominee__text {
+    color: #666;
+}
+
+.view-link {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.arrow {
+    font-size: 1.2rem;
+}
+
+/* ------------------- */
+.nominee-grid {
+    margin: 0 auto;
+    padding: 40px 5%;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.nominee-grid__header {
+    margin-bottom: 40px;
+}
+
+.nominee-grid__header-tag {
+    color: #242424;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.nominee-grid__main-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #222;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.sites-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);;
+    gap: 20px;
+    margin: 0 auto;
+}
+
+.site-card {
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.site-card:hover .website-info {
+    opacity: 1;
+}
+
+.site-thumbnail {
+    width: 100%;
+    height: 100%;
+    min-width: 330px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.site-thumbnail:hover {
+    filter: brightness(80%);
+    transition: all 0.3s;
+}
+
+.site-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+}
+
+.site-title {
+    font-weight: 600;
+    font-size: 15px;
+    color: #333;
+}
+
+.site-title__span {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 8px;
+}
+
+.agency {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.agency-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.agency-name {
+    font-size: 14px;
+    color: #555;
+}
+
+.view-winner {
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    padding-bottom: 10%;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    justify-self: center;
+
+}
+
+.view-winner__text {
+    color: #666;
+}
+
+.view-winner__link {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.winner-arrow {
+    font-size: 1.2rem;
+}
+
+/* Course-grid Layout */
+
+.course-grid-box {
+    margin: 0 auto;
+    padding: 0 5%;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.course-grid__header {
+    margin-bottom: 40px;
+}
+
+.course-grid__header-tag {
+    color: #242424;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.course-grid__main-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #222;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.course-grid {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.course-card {
+    background: rgb(252, 252, 252);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.course-placeholder {
+    height: 50%;
+    overflow: hidden;
+}
+
+.course-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.course-content {
+    padding: 20px;
+}
+
+.course-title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    min-height: 70px;
+    color: #222;
+}
+
+.course-instructor-label {
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.course-instructor-name {
+    font-size: 12px;
+    color: #6b6b6b;
+    margin-bottom: 15px;
+    font-weight: 500;
+    padding-right: 25%;
+}
+
+.course-title__label-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-instructor-label__span {
+    font-weight: 400;
+    font-size: 11px;
+}
+
+.course-rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.course-score-bar {
+    height: 4px;
+    width: 60px;
+    background-color: #fff083;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+
+/* Collection-grid Layout */
+
+.collection-box {
+    margin: 0 auto;
+    padding: 0 5%;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.collection-grid__header {
+    margin-bottom: 40px;
+}
+
+.collection-grid__header-tag {
+    color: #242424;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.collection-grid__main-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #222;
+    line-height: 1.2;
+    margin: 0;
+}
+
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.collection-card {
+    border-radius: 8px;
+    color: white;
+}
+
+.collection-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.collection-card img:hover {
+    filter: brightness(80%);
+    transition: all 0.3s;
+}
+
+
+
+.collection-title {
+    font-weight: 500;
+    margin-right: auto;
+    color: #000;
+    display: flex;
+    font-size: 1rem;
+}
+
+.curated-by {
+    color: #888;
+    font-size: 10px;
+    margin-right: 10px;
+    padding-left: 5px;
+    padding-top: 6px;
+}
+
+.avatar-group {
+    display: flex;
+}
+
+.avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #555;
+    margin-right: -8px;
+    border: 2px solid #222;
+}
+
+.count {
+    font-size: 12px;
+    color: #333;
+    margin-left: 12px;
+    padding-top: 5px;
+
+}
+
+/* Directory-grid layout */
+
+.directory-box {
+    margin: 0 auto;
+    padding: 0 5%;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.directory-grid__header {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.directory-grid__header-tag {
+    color: #242424;
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.directory-grid__main-title {
+    font-size: 7rem;
+    font-weight: 600;
+    color: #222;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.directory-grid__p{
+    font-size: 16px;
+}    
+
+
+.directory-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.directory-card {
+    background-color: #222;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.directory-card__logo-image{
+    display: flex;
+    justify-content: space-between;
+}
+
+.directory-card-logo {
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.directory-card-image {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    margin: 5%;
+}
+
+.directory-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 2rem;
+    color: white;
+}
+.directory-card-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.directory-card-title span{
+    font-size: 0.8rem;
+    padding: 10px;
+
+}
+
+.directory-card-title strong{
+    font-size: 2rem;
+    padding: 10px;
+}
+
+.directory-card-badge {
+    padding: 5px 5px;
+    border-radius: 4px;
+    display: flex;
+    font-size: 12px;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, .3);
+    margin-right: 5%;
+    margin-top: 25px;
+}
+
+.directory-card-badge div{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.directory-card-footer {
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+    font-size: 0.8rem;
+    padding: 10px;
+}
+
+.directory-card-footer strong{
+    padding-right: 0.8rem;
+    font-weight: 400;
+}
+
+/* directory table */
+
+.directory-table {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin-top: 2rem;
+}
+
+.directory-head__row {
+    background-color: white;
+}
+.directory-head__row th {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px dotted grey;
+    color: #222222;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+
+.directory-row td {
+    padding: 30px 20px;
+    border-bottom: 1px dotted grey;
+    color: #222222;
+}
+
+.directory-row__pro{
+    font-size: 9px;
+}
+
+.directory-row__avatar img {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.view-btn {
+    background-color: #ffffff;
+    border: 1px solid #333;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.view-btn:hover{
+    background-color: #333;
+    color: white;
+    transition: 0.3s
+}
+
+/* Market-grid-layout */
+
+.market-box {
+    margin: 0 auto;
+    padding: 0 5%;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.market-grid__header {
+    margin-bottom: 40px;
+}
+
+.market-grid__header-tag {
+    color: #242424;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.market-grid__main-title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #222;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.market-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    /* margin: 0 5%; */
+}
+
+.market-card {
+    border-radius: 0.8rem;
+    overflow: hidden;   
+}
+
+.market-image {
+    width: 100%;
+}
+
+.market-image:hover {
+    filter: brightness(80%);
+    transition: all 0.3s;
+}
+
+.market-details {
+    padding: 15px;
+}
+
+.market-title {
+    font-size: 0.8rem;
+    background-color: white;
+    color: #222222;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    flex-wrap: nowrap;
+}
+
+.market-title__second{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #222222 ;
+}
+
+.market-author-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3px;
+    padding: 2rem 1rem;
+    background-color: white;
+}
+
+.market-author {
+    font-size: 12px;
+    color: #222222;
+    padding-left: 5px;
+    font-weight: 700 ;
+}
+
+.market-author__by{
+    font-weight: 300;
+}
+
+.market-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #222222;
+    display: flex;
+    justify-content: space-evenly;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+.market-price__from{
+    font-size: 12px;
+    font-weight: 500;
+    padding-right: 5px;
+}
+
+.market-price__usd{
+    font-size: 12px;
+    font-weight: 500;
+    padding-left: 5px;
+}
+
+.view-market {
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    padding: 2rem 1rem;
+    text-decoration: none;
+    margin: 3px 0;
+    background-color: white;
+}
+
+.view-market__product{
+    font-size: 12px;
+    color: #222222;
+    padding-left: 5px;
+    font-weight: 500 ;
+}
+
+
+/* Footer top */
+
+.footer {
+    padding: 15px;
+    background-color: white;
+}
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 4%;
+}
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 3px dotted #555;
+    margin: 0 4%;
+}
+
+.footer-top a {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 12px 5px;
+    font-weight: 500;
+}
+.footer-top a:hover {
+    color: #555;
+}
+.next-conference {
+    background-color: #ededed;
+    display: flex;
+    align-items: center;
+    padding: 5px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.next-conference img{
+    height: 1rem;
+    width: 1rem;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.next-conference span{
+    font-weight: 600;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+.social-links a {
+    color: #222222;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.social-links span{
+    color: #222222;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.legal-links {
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    color: #666;
+}
+
+/* Footer bottom */
+
+.footer-bottom{
+    margin-bottom: 140px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 20px;
+    margin: 4% 4%;
+    
+}
+
+
+@media (max-width: 75rem) {
+    .nominees-boxes {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none; 
+        -ms-overflow-style: none; 
+        justify-content: flex-start;
+        padding-bottom: 1rem; 
+    }
+    
+    .nominee-item {
+        flex: 0 0 calc(50% - 12.5px);
+        min-width: calc(50% - 12.5px);
+        scroll-snap-align: start;
+    }
+    
+    .nominee-section__title {
+        font-size: 5rem;
+    }
+
+    .sites-grid{
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    
+    .nominee-grid__main-title {
+        font-size: 28px;
+    }
+    
+    .site-thumbnail {
+        height: 75%; 
+    }
+    
+    .nominee-grid {
+        padding: 0 3%;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-flow: dense;
+        overflow: hidden;
+    }
+
+    .course-grid .course-card:nth-child(n+4) {
+        display: none;
+    }
+
+    .directory-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .directory-grid .directory-card:nth-child(n+3) {
+        display: none;
+    }
+    
+    .directory-grid__main-title {
+        font-size: 5rem;
+    }
+
+    .market-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .market-grid .market-card:nth-child(n+4) {
+        display: none;
+    }
+}
+
+@media (max-width: 60rem) {
+    .market-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .market-grid .market-card:nth-child(n+3) {
+        display: none;
+    }
+    
+    .market-card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 48rem) {
+    .nominee-item {
+        flex: 0 0 100%; 
+        min-width: 100%;
+    }
+    
+    .nominee-section__title {
+        font-size: 3rem;
+    }
+
+    .collection-grid{
+        grid-template-columns: 1fr
+    }
+
+    .sites-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .nominee-grid__main-title {
+        font-size: 24px;
+    }
+    
+    .site-thumbnail {
+        height: 75%;
+    }
+    
+    .site-info {
+        padding: 10px 12px;
+    }
+    
+    .agency-name {
+        font-size: 13px;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+        grid-auto-flow: dense;
+    }
+
+    .course-grid-box {
+        padding: 30px;
+    }
+
+    .course-grid .course-card:nth-child(n+3) {
+        display: none;
+    }
+
+    .directory-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .directory-grid__main-title {
+        font-size: 3rem;
+    }
+    
+    .directory-card {
+        margin-bottom: 20px;
+    }
+    .market-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .market-card {
+        margin-bottom: 20px;
+    }
+}

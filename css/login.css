@@ -1,0 +1,250 @@
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter Tight", sans-serif
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.login-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 101;   
+    opacity: 0;
+    display: none;
+    transition: all 0.3s ease;
+    width: 80%;
+    max-width: 900px;
+}
+
+.backdrop.open {
+    display: block;
+    opacity: 1;
+}
+
+.login-modal.open {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.login-modal .login-container {
+    height: auto;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.login-modal .welcome-section {
+    padding: 30px;
+}
+
+.login-modal .login-section {
+    padding: 20px;
+}
+
+.login-container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    border-radius: 8px;
+
+}
+
+.welcome-section {
+    flex: 1;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 50px;
+}
+
+.welcome {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px;
+}
+
+.logo-smiley {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20%;
+    padding-bottom: 40%;
+    justify-content: center;
+}
+
+.welcome-section .logo {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+
+.smiley {
+    margin-left: 30px;
+}
+
+.welcome-register-link {
+    /* position: absolute; */
+    bottom: 20px;
+    left: 20px;
+    color: #222222;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 20px;
+}
+
+.welcome-register-link span {
+    color: #4d4d4d;
+}
+
+.login-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-bottom-color: rgb(0, 0, 0);
+}
+
+.login-form label {
+    color: #a7a7a7;
+    font-size: 0.8em;
+    margin-top: 10px;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    text-align: start;
+}
+
+.login-form input {
+    background: transparent;
+}
+
+.login-form .keep-logged {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.login-form .keep-logged input {
+    width: auto;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.login-form .keep-logged label{
+    margin-bottom: 10px;
+}
+
+.login-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.login-button:hover{
+    background-color: #222222;
+}
+
+.login-forgot-password{
+    text-align: end;
+    font-size: 12px;
+}
+
+.login-or-signin{
+    text-align: start;
+    color: #a7a7a7;
+    font-size: 14px;
+    margin-top: 3rem;
+}
+
+.social-login {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.social-login button {
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 4px;
+}
+
+.social-login button:hover{
+    background-color: #e6e6e6;
+}
+
+@media (max-width:48rem){
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 8px;
+    }
+
+    .login-modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 101;
+        opacity: 0;
+        display: none;
+        transition: all 0.3s ease;
+        width: 100%;
+        max-width: 100%;
+        height: 80%;
+    }
+
+}

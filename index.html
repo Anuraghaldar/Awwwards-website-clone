@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awwwards</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css//layout.css">
+    <link rel="stylesheet" href="/css/share.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="/js/login.js" defer></script>
+    <script src="/js/index.js" defer></script>
+</head>
+
+<body>
+    <!-- Login -->
+    <div class="backdrop" id="loginBackdrop"></div>
+    <div class="login-modal" id="loginModal">
+        <div class="login-container">
+            <div class="welcome-section">
+                <div class="welcome">
+                    Welcome!
+                </div>
+                <div class="logo-smiley">
+                    <div class="logo">W.</div>
+                    <div class="smiley">
+                        <i class="fa fa-smile-o" style="font-size:8rem;color:rgb(13, 105, 51)"></i>
+                    </div>
+                </div>
+                <div class="welcome-register-link">
+                    <span>Not a member yet? </span>
+                    Register now
+                </div>
+            </div>
+
+            <div class="login-section">
+                <form class="login-form">
+                    <h2>Log in</h2>
+                    <label for="form-text__field">EMAIL OR USERNAME</label>
+                    <input type="text" id="form-text__field" placeholder="EMAIL OR USERNAME">
+                    <label for="form-text__password">PASSWORD</label>
+                    <input type="password" id="form-text__password" placeholder="PASSWORD">
+
+                    <div class="keep-logged">
+                        <input type="checkbox" id="keepLoggedIn">
+                        <label for="keepLoggedIn">Keep me logged in</label>
+                    </div>
+                    <button type="submit" class="login-button">
+                        Log in now
+                    </button>
+                    <div class="login-forgot-password">
+                        Forgot your password?
+                    </div>
+                    <div class="login-or-signin">
+                        or signin with
+                    </div>
+
+                    <div class="social-login">
+                        <button type="button"><i class="fab fa-google"></i> Google</button>
+                        <button type="button"><i class="fab fa-facebook"></i> Facebook</button>
+                        <button type="button"><i class="fab fa-twitter"></i> Twitter</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main nav header -->
+    <div>
+        <nav class="nav-header">
+            <div class="nav-left">
+                <button class="toggle-button">
+                    <span class="toggle-button__bar"></span>
+                    <span class="toggle-button__bar"></span>
+                    <span class="toggle-button__bar"></span>
+                </button>
+                <div class="nav-left__logo">
+                    <a href="/page/index.html">W.</a>
+                </div>
+                <div class="nav-left__links">
+                    <div class="nav-header-main__item">
+                        <span class="nav-header-main__link">
+                            Explore
+                            <span class="nav-header-main__link--arrow"><i class="fa fa-angle-down"></i></span>
+                        </span>
+                    </div>
+                    <div class="nav-header-main__item">
+                        <a class="nav-header-main__link" href="#">Directory</a>
+                    </div>
+                    <div class="nav-header-main__item">
+                        <a class="nav-header-main__link" href="#">
+                            Academy
+                            <span class="nav-left__budget-tag budget-tag__shiny anim-shiny">New</span>
+                        </a>
+                    </div>
+                    <div class="nav-header-main__item">
+                        <a class="nav-header-main__link" href="#">Jobs</a>
+                    </div>
+                    <div class="nav-header-main__item">
+                        <a class="nav-header-main__link" href="/page/market.html">Market</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-header__search-bar">
+                <i class="fas fa-search nav-header__search-icon"></i>
+                <input type="text" placeholder="Search by inspiration">
+            </div>
+            <div class="nav-right">
+                <a href="#" class="login"><span class="login-user-icon"><i class="fa-regular fa-user"></i></span> Log
+                    In</a>
+                <a href="#" class="signup">Sign Up</a>
+                <a href="#" class="be-pro">Be Pro</a>
+                <a href="#" class="submit-website">Submit Website</a>
+            </div>
+        </nav>
+    </div>
+    <!-- side hamburger popup -->
+
+    <div class="menu-hamburger">
+        <div class="menu-container">
+            <div class="menu-container-item">
+                <div class="menu-item menu-item-dark">
+                    <span>Explore</span>
+                </div>
+                <div class="menu-item">
+                    <span>Awards</span>
+                    <span class="menu-item-expand "><i class="fa fa-angle-down"></i></span>
+                </div>
+                <div class="menu-item">
+                    <span>By Category</span>
+                    <span class="menu-item-expand"><i class="fa fa-angle-down"></i></span>
+                </div>
+                <div class="menu-item">
+                    <span>By Technology</span>
+                    <span class="menu-item-expand"><i class="fa fa-angle-down"></i></span>
+                </div>
+                <div class="menu-item">
+                    <span>Collections</span>
+                    <span class="menu-item-expand"><i class="fa fa-angle-down"></i></span>
+                </div>
+                <div class="menu-item menu-item-dark">
+                    <span>Blog</span>
+                </div>
+                <div class="menu-item menu-item-dark">
+                    <span>Directory</span>
+                </div>
+                <div class="menu-item menu-item-dark">
+                    <span>Academy</span>
+                    <span class=" nav-left__budget-tag budget-tag__shiny anim-shiny">New</span>
+                </div>
+                <div class="menu-item menu-item-dark">
+                    <span>Jobs</span>
+                </div>
+                <div class="menu-item menu-item-dark">
+                    <span>Market</span>
+                </div>
+            </div>
+            <div class="menu-item-icon">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-tiktok"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Arrow button scroll -->
+    <button class="scroll-arrow"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <!-- bottom site info -->
+    <div class="site-info">
+        <p>Site of the Day <span class="date">Mar 28, 2025</span>Score <span class="score">7.45</span> of 10</p>
+    </div>
+    <div class="main-title">
+        <h1>ALPINE BIO</h1>
+    </div>
+
+    <!-- Main image -->
+    <div class="creator-info">
+        <div class="creator-avatar">
+            <img src="/assets/1st icon pic.png" alt="creator-avatar_img">
+        </div>
+        <span class="creator-name">Resn</span>
+        <span class="pro-badge">PRO</span>
+    </div>
+
+    <div class="main-image">
+        <img src="/assets/mainpic-11.jpg" alt="main-pic">
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="nav-buttons">
+        <a href="/page/index.html" class="nav-buttons__logo-button"> W.</a>
+        <div class="nav-buttons__background">
+            <button class="nav-buttons__section-button" data-section="nominees">Nominees</button>
+            <button class="nav-buttons__section-button" data-section="courses">Courses</button>
+            <button class="nav-buttons__section-button" data-section="collections">Collections</button>
+            <button class="nav-buttons__section-button" data-section="directory">Directory</button>
+            <button class="nav-buttons__section-button" data-section="market">Market</button>
+        </div>
+        <button class="nav-buttons__visit-button">Visit Sotd.</button>
+    </div>
+
+    <!-- Nominees -->
+    <div id="nominees" class="content-section">
+        <div class="nominee-section ">
+            <div class="latest">
+                <h5>Latest</h5>
+            </div>
+
+            <h1 class="nominee-section__title">
+                NOMINEES
+                <!-- <span class="trophy"></span> -->
+            </h1>
+
+            <div class="nominee-section__subheading">
+                Vote for the latest websites on<br>
+                <div>awwwards</div>
+            </div>
+
+            <div class="nominees-boxes" id="nominees">
+                <!-- Nominee 1 -->
+                <div class="nominee-item">
+                    <img src="/assets/nominee//the-power-of-composites.jpg" alt="De Malde - Canvas Chronicles"
+                        class="nominee-image">
+
+                    <div class="vote-button">
+                        -> Vote Now
+                    </div>
+                    <div class="website-info">
+                        <div class="website-label">WEBSITE</div>
+                        <div class="website-label__action-icon">
+                            <div class="website-name">The Power of Composites</div>
+                            <div class="action-icons">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="white" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5 5C5 3.89543 5.89543 3 7 3H17C18.1046 3 19 3.89543 19 5V21L12 17.5L5 21V5Z"
+                                        stroke="white" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Original info -->
+                    <div class="nominee-info">
+                        <div class="nominee-name">The Power of Composites</div>
+                        <div style="font-size: 12px; color: #222222; padding: 0 5px;">by</div>
+                        <div class="agency">
+                            <img src="/assets/1st icon pic.png" alt="empi logo" class="agency-avatar">
+                            <span class="agency-name">empi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nominee 2 -->
+                <div class="nominee-item">
+                    <img src="/assets/nominee/sui-overflow2025.png" alt="Composites.archi" class="nominee-image">
+                    <!-- Hover elements -->
+                    <div class="vote-button">
+                        -> Vote Now
+                    </div>
+                    <div class="website-info">
+                        <div class="website-label">WEBSITE</div>
+                        <div class="website-label__action-icon">
+                            <div class="website-name">Sui Overflow 2025</div>
+                            <div class="action-icons">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="white" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5 5C5 3.89543 5.89543 3 7 3H17C18.1046 3 19 3.89543 19 5V21L12 17.5L5 21V5Z"
+                                        stroke="white" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Original info -->
+                    <div class="nominee-info">
+                        <div class="nominee-name">Sui Overflow 2025</div>
+                        <div style="font-size: 12px; color: #222222; padding: 0 5px;">by</div>
+                        <div class="agency">
+                            <img src="/assets/1st icon pic.png" alt="Sparkk logo" class="agency-avatar">
+                            <span class="agency-name">Sparkk</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nominee 3 -->
+                <div class="nominee-item">
+                    <img src="/assets/nominee/crafting-experience.png" alt="Antfood" class="nominee-image">
+                    <!-- Hover elements -->
+                    <div class="vote-button">
+                        -> Vote Now
+                    </div>
+                    <div class="website-info">
+                        <div class="website-label">WEBSITE</div>
+                        <div class="website-label__action-icon">
+                            <div class="website-name">Crafting experience</div>
+                            <div class="action-icons">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="white" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5 5C5 3.89543 5.89543 3 7 3H17C18.1046 3 19 3.89543 19 5V21L12 17.5L5 21V5Z"
+                                        stroke="white" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Original info -->
+                    <div class="nominee-info">
+                        <div class="nominee-name">Crafting experience</div>
+                        <div style="font-size: 12px; color: #222222; padding: 0 5px;">by</div>
+                        <div class="agency">
+                            <img src="/assets/1st icon pic.png" alt="Réplica logo" class="agency-avatar">
+                            <span class="agency-name">Réplica</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-nominee">
+                <span class="view-nominee__text">Check out all submitted websites</span>
+                <span class="arrow">→</span>
+                <a href="#" class="view-link">View Nominees</a>
+            </div>
+
+
+            <!-- Nominee winners -->
+
+            <div class="nominee-grid">
+                <div class="nominee-grid__header">
+                    <p class="nominee-grid__header-tag">Winners</p>
+                    <h1 class="nominee-grid__main-title">Recent Sites <br>of the Day.</h1>
+                </div>
+
+                <div class="sites-grid">
+                    <!-- Site 1 -->
+                    <div class="site-card">
+                        <img src="/assets//nominee-grid/1.jpg" class="site-thumbnail"
+                            alt="justanother designer website">
+                        <div class="site-info">
+                            <span class="site-title">bleibgleich'25 </span>
+                            <span class="site-title__span">by</span>
+                            <div class="agency">
+                                <img src="/assets/1st icon pic.png" alt="Sparkk logo" class="agency-avatar">
+                                <span class="agency-name">Sparkk</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Site 2 -->
+                    <div class="site-card">
+                        <img src="/assets/nominee-grid/2.png" class="site-thumbnail" alt="Alpine Bio website">
+                        <div class="site-info">
+                            <span class="site-title">Alpine Bio</span>
+                            <span class="site-title__span">by</span>
+                            <div class="agency">
+                                <img src="/assets/1st icon pic.png" alt="Sparkk logo" class="agency-avatar">
+                                <span class="agency-name">Sparkk</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Site 3 -->
+                    <div class="site-card">
+                        <img src="/assets/nominee-grid/3.jpg" class="site-thumbnail"
+                            alt="Brand Creation Kitchen website">
+                        <div class="site-info">
+                            <span class="site-title">Seasoned</span>
+                            <span class="site-title__span">by</span>
+                            <div class="agency">
+                                <img src="/assets/1st icon pic.png" alt="Sparkk logo" class="agency-avatar">
+                                <span class="agency-name">Sparkk</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Site 4 -->
+                    <div class="site-card">
+                        <img src="/assets//nominee-grid//4.png" class="site-thumbnail" alt="The Blue Desert website">
+                        <div class="site-info">
+                            <span class="site-title">Blue Desert</span>
+                            <span class="site-title__span">by</span>
+                            <div class="agency">
+                                <img src="/assets/1st icon pic.png" alt="Sparkk logo" class="agency-avatar">
+                                <span class="agency-name">Sparkk</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Site 5 -->
+                    <div class="site-card">
+                        <img src="/assets/nominee-grid/5.jpg" class="site-thumbnail" alt="YOURBANA ROMA 25 website">
+                        <div class="site-info">
+                            <span class="site-title">Yourbana Roma 25</span>
+                            <span class="site-title__span">by</span>
+                            <div class="agency">
+                                <img src="/assets/1st icon pic.png" alt="Sparkk logo" class="agency-avatar">
+                                <span class="agency-name">Sparkk</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Site 6 -->
+                    <div class="site-card">
+                        <img src="/assets//nominee-grid/6.jpg" class="site-thumbnail"
+                            alt="Siena Film Foundation website">
+                        <div class="site-info">
+                            <span class="site-title">Siena Film Foundation</span>
+                            <span class="site-title__span">by</span>
+                            <div class="agency">
+                                <img src="/assets/1st icon pic.png" alt="Sparkk logo" class="agency-avatar">
+                                <span class="agency-name">Sparkk</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-winner">
+                    <span class="view-winner__text">Check out all submitted websites</span>
+                    <span class="winner-arrow">→</span>
+                    <a href="#" class="view-winner__link">View Winners</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Courses -->
+
+        <div id="courses" class="course-grid-box content-section">
+            <div class="course-grid__header">
+                <p class="course-grid__header-tag">Academy</p>
+                <h1 class="course-grid__main-title">Learn from the<br>best instructors.</h1>
+            </div>
+            <div class="course-grid">
+                <div class="course-card">
+                    <div class="course-placeholder">
+                        <img src="/assets/academy-course/1.webp" alt="">
+                    </div>
+                    <div class="course-content">
+                        <div class="course-title">Innovative Web Design in Figma: A Step-by-Step Process</div>
+                        <div class="course-title__label-name">
+                            <div class="course-instructor-label">Instructor</div>
+                            <div class="course-instructor-name">Louis Paquet</div>
+                        </div>
+                        <div class="course-rating">
+                            <div>
+                                <div class="course-instructor-label">Score <span
+                                        class="course-instructor-label__span">5/5</span></div>
+                                <div class="course-score-bar"></div>
+                            </div>
+
+                            <span>→</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="course-card">
+                    <div class="course-placeholder">
+                        <img src="/assets/academy-course/2.jpg" alt="">
+                    </div>
+                    <div class="course-content">
+                        <div class="course-title">Learn Figma from 0 to 100 (10 Courses)</div>
+                        <div class="course-title__label-name">
+                            <div class="course-instructor-label">Instructor</div>
+                            <div class="course-instructor-name">Mirko Santangelo</div>
+                        </div>
+                        <div class="course-rating">
+                            <div>
+                                <div class="course-instructor-label">Score <span
+                                        class="course-instructor-label__span">5/5</span></div>
+                                <div class="course-score-bar"></div>
+                            </div>
+                            <span>→</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="course-card">
+                    <div class="course-placeholder">
+                        <img src="/assets/academy-course/3.png" alt="">
+                    </div>
+                    <div class="course-content">
+                        <div class="course-title">UI Design: Create a website in Figma</div>
+                        <div class="course-title__label-name">
+                            <div class="course-instructor-label">Instructor</div>
+                            <div class="course-instructor-name">Laura Knoops</div>
+                        </div>
+                        <div class="course-rating">
+                            <div>
+                                <div class="course-instructor-label">Score <span
+                                        class="course-instructor-label__span">5/5</span></div>
+                                <div class="course-score-bar"></div>
+                            </div>
+                            <span>→</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="course-card">
+                    <div class="course-placeholder">
+                        <img src="/assets/academy-course/4.jpg" alt="">
+                    </div>
+                    <div class="course-content">
+                        <div class="course-title">Creative Coding 2.0 in JS: Animation, Sound, & Color</div>
+                        <div class="course-title__label-name">
+                            <div class="course-instructor-label">Instructor</div>
+                            <div class="course-instructor-name">Bruno Imbrizi</div>
+                        </div>
+                        <div class="course-rating">
+                            <div>
+                                <div class="course-instructor-label">Score <span
+                                        class="course-instructor-label__span">5/5</span></div>
+                                <div class="course-score-bar"></div>
+                            </div>
+                            <span>→</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="view-winner">
+                <span class="view-winner__text">Choose from over <span style="font-weight: 500; color: black;">
+                        hundreds</span> of courses</span>
+                <span class="winner-arrow">→</span>
+                <a href="#" class="view-winner__link">View Academy</a>
+            </div>
+        </div>
+
+        <!-- Collections -->
+
+        <div id="collections" class="collection-box content-section">
+            <div class="collection-grid__header">
+                <p class="collection-grid__header-tag">Collections</p>
+                <h1 class="collection-grid__main-title">Explore a wide<br>variety of collections.</h1>
+            </div>
+            <div class="collection-grid">
+                <div class="collection-card">
+                    <img src="/assets/collection/1st collection.jpg" alt="1st image">
+                    <div class="collection-title">Galleries and SlideShows
+                        <div class="curated-by">followed by</div>
+                        <div class="avatar-group">
+                            <div class="avatar"><img src="/assets/collection/profile1.png" alt=""></div>
+                            <div class="avatar"><img src="/assets/collection/profile2.jpg" alt=""></div>
+                            <div class="avatar"><img src="/assets/collection/profile3.jpg" alt=""></div>
+                        </div>
+                        <div class="count">+1305</div>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <img src="/assets/collection/2nd collection.jpg" alt="2nd image">
+                    <div class="collection-title">The Best of Navigation
+                        <div class="curated-by">followed by</div>
+                        <div class="avatar-group">
+                            <div class="avatar"><img src="/assets/collection/profile2.jpg" alt=""></div>
+                            <div class="avatar"><img src="/assets/collection/profile1.png" alt=""></div>
+                            <div class="avatar"><img src="/assets/collection/profile2.jpg" alt=""></div>
+                        </div>
+                        <div class="count">+2065</div>
+                    </div>
+                </div>
+            </div>
+            <div class="view-winner">
+                <span class="view-winner__text">Find inspiration for your projects</span>
+                <span class="winner-arrow">→</span>
+                <a href="#" class="view-winner__link">View Collection</a>
+            </div>
+        </div>
+
+        <!-- DIRECTORY -->
+
+
+        <div id="directory" class="directory-box content-section">
+            <div class="directory-grid__header">
+                <p class="directory-grid__header-tag">Directory</p>
+                <h1 class="directory-grid__main-title">W.CREATORS</h1>
+                <p class="directory-grid__p">Active creators in your country.</p>
+            </div>
+
+            <div class="directory-grid">
+                <!-- 1st directory -->
+                <div class="directory-card">
+                    <div class="directory-card__logo-image">
+                        <div class="directory-card-logo">H/</div>
+                        <img src="/assets/directory/1stpic.png" alt="Huemor" class="directory-card-image">
+                    </div>
+                    <div class="directory-card-content">
+                        <div class="directory-card-title">
+                            <span>International</span>
+                            <strong>Huemor</strong>
+                        </div>
+                        <div class="directory-card-badge">Works <div> 40</div>
+                        </div>
+                    </div>
+                    <div class="directory-card-footer">
+                        <span>huemorrocks.com</span>
+                        <strong>6 awards</strong>
+                    </div>
+                </div>
+                <!-- 2nd directory -->
+                <div class="directory-card">
+                    <div class="directory-card__logo-image">
+                        <div class="directory-card-logo">Ba/</div>
+                        <img src="/assets/directory/2ndpic.png" alt="Huemor" class="directory-card-image">
+                    </div>
+                    <div class="directory-card-content">
+                        <div class="directory-card-title">
+                            <span>International</span>
+                            <strong>Bachoo</strong>
+                        </div>
+                        <div class="directory-card-badge">Works <div> 22</div>
+                        </div>
+                    </div>
+                    <div class="directory-card-footer">
+                        <span>bachodesign.com</span>
+                        <strong>22 awards</strong>
+                    </div>
+                </div>
+                <!-- 3rd directory -->
+                <div class="directory-card">
+                    <div class="directory-card__logo-image">
+                        <div class="directory-card-logo">mm</div>
+                        <img src="/assets/directory/3rdpic.jpg" alt="Huemor" class="directory-card-image">
+                    </div>
+                    <div class="directory-card-content">
+                        <div class="directory-card-title">
+                            <span>International</span>
+                            <strong>Akaru</strong>
+                        </div>
+                        <div class="directory-card-badge">Works <div> 40</div>
+                        </div>
+                    </div>
+                    <div class="directory-card-footer">
+                        <span>akaru.fir</span>
+                        <strong>39 awards</strong>
+                    </div>
+                </div>
+            </div>
+            <!-- Directory table -->
+
+            <table class="directory-table">
+                <thead class="directory-head">
+                    <tr class="directory-head__row">
+                        <th>Name</th>
+                        <th>Profile</th>
+                        <th>Awards</th>
+                        <th>Categories</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody class="directory-table__body">
+                    <tr class="directory-row">
+                        <td>
+                            <span class="directory-row__avatar"><img src="/assets/directory/table1.png" alt=""></span>
+                            Visual Identity
+                            <span class="directory-row__pro">
+                                INT
+                            </span>
+                        </td>
+                        <td>Studio</td>
+                        <td>8</td>
+                        <td>Web Design, Web Development, UX...</td>
+                        <td><button class="view-btn">View</button></td>
+                    </tr>
+                    <tr class="directory-row">
+                        <td>
+                            <span class="directory-row__avatar"><img src="/assets/directory/table3.png" alt=""></span>
+                            Studio Mesmer
+                            <span class="directory-row__pro">
+                                PRO
+                            </span>
+                        </td>
+                        <td>Studio</td>
+                        <td>2</td>
+                        <td>Web Design, UX/UI, Interactive</td>
+                        <td><button class="view-btn">View</button></td>
+                    </tr>
+                    <tr class="directory-row">
+                        <td>
+                            <span class="directory-row__avatar"><img src="/assets/directory/table2.png" alt=""></span>
+                            Lumina
+                            <span class="directory-row__pro">
+                                PRO
+                            </span>
+                        </td>
+                        <td>Studio</td>
+                        <td>0</td>
+                        <td>Web Design, Web Development, UX...</td>
+                        <td><button class="view-btn">View</button></td>
+                    </tr>
+                    <tr class="directory-row">
+                        <td>
+                            <span class="directory-row__avatar"><img src="/assets/directory/table1.png" alt=""></span>
+                            Brand Impetus
+                            <span class="directory-row__pro">
+                                PRO
+                            </span>
+                        </td>
+                        <td>Agency</td>
+                        <td>1</td>
+                        <td>Web Design</td>
+                        <td><button class="view-btn">View</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="view-winner">
+                <span class="view-winner__text">Connect with over 5,432 Agencies and Professionals</span>
+                <span class="winner-arrow">→</span>
+                <a href="#" class="view-winner__link">View Directory</a>
+            </div>
+        </div>
+
+        <!-- MARKET -->
+
+        <div id="market" class="market-box content-section">
+            <div class="market-grid__header">
+                <p class="market-grid__header-tag">Market</p>
+                <h1 class="market-grid__main-title">A curated marketplace<br>for digital & physical products</h1>
+            </div>
+
+            <div class="market-grid">
+                <div class="market-card">
+                    <img src="/assets/home-market-image/1stmarket.jpg" alt="market" class="market-image">
+                    <div class="market-title">
+                        <div class="market-title__first">Digital Product</div>
+                        <div class="market-title__second">Arpeggio° — Digital Product Agency Template</div>
+                    </div>
+                    <div class="market-author-price">
+                        <div class="market-author"><span class="market-author__by">By</span> Tamas Bodo</div>
+                        <div class="market-price">
+                            <div class="market-price__from">from</div>
+                            $89
+                            <div class="market-price__usd">USD</div>
+                        </div>
+                    </div>
+                    <div class="view-market">
+                        <div class="view-market__product">View Product</div>
+                        <div>→</div>
+                    </div>
+                </div>
+                <div class="market-card">
+                    <img src="/assets/home-market-image/2ndmarket.jpg" alt="market" class="market-image">
+                    <div class="market-title">
+                        <div class="market-title__first">Digital Product</div>
+                        <div class="market-title__second">RESCALE — SaaS Landing Page Framer Template</div>
+                    </div>
+                    <div class="market-author-price">
+                        <div class="market-author"><span class="market-author__by">By</span> Tamas Bodo</div>
+                        <div class="market-price">
+                            <div class="market-price__from">from</div>
+                            $79
+                            <div class="market-price__usd">USD</div>
+                        </div>
+                    </div>
+                    <div class="view-market">
+                        <div class="view-market__product">View Product</div>
+                        <div>→</div>
+                    </div>
+                </div>
+                <div class="market-card">
+                    <img src="/assets/home-market-image/3rdmarket.png" alt="market" class="market-image">
+                    <div class="market-title">
+                        <div class="market-title__first">Digital Product</div>
+                        <div class="market-title__second">Systematic — Framer Documentation Template</div>
+                    </div>
+                    <div class="market-author-price">
+                        <div class="market-author"><span class="market-author__by">By</span> Tamas Bodo</div>
+                        <div class="market-price">
+                            <div class="market-price__from">from</div>
+                            $59
+                            <div class="market-price__usd">USD</div>
+                        </div>
+                    </div>
+                    <div class="view-market">
+                        <div class="view-market__product">View Product</div>
+                        <div>→</div>
+                    </div>
+                </div>
+                <div class="market-card">
+                    <img src="/assets/home-market-image/4thmarket.jpg" alt="market" class="market-image">
+                    <div class="market-title">
+                        <div class="market-title__first">Digital Product</div>
+                        <div class="market-title__second">Captured — Photography Framer Template</div>
+                    </div>
+                    <div class="market-author-price">
+                        <div class="market-author"><span class="market-author__by">By</span> Tamas Bodo</div>
+                        <div class="market-price">
+                            <div class="market-price__from">from</div>
+                            $79
+                            <div class="market-price__usd">USD</div>
+                        </div>
+                    </div>
+                    <div class="view-market">
+                        <div class="view-market__product">View Product</div>
+                        <div>→</div>
+                    </div>
+                </div>
+            </div>
+            <div class="view-winner">
+                <span class="view-winner__text">Browse specially curated products</span>
+                <span class="winner-arrow">→</span>
+                <a href="#" class="view-winner__link">View Market</a>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+
+        <footer class="footer">
+            <div class="logo">W.</div>
+
+            <div class="footer-top">
+                <div class="footer-items">
+                    <a href="#">Websites</a>
+                    <a href="#">Collections</a>
+                    <a href="#">Elements</a>
+                </div>
+                <div class="footer-items">
+                    <a href="#">Academy</a>
+                    <a href="#">Jobs</a>
+                    <a href="#">Market</a>
+                </div>
+                <div class="footer-items">
+                    <a href="#">Directory</a>
+                    <a href="#">Conferences</a>
+                </div>
+                <div class="footer-items">
+                    <a href="#">FAQs</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact Us</a>
+                </div>
+
+                <div class="next-conference">
+                    Next Conference: <img src="/assets/footer/calendar.png" alt="calender">
+                    <span>Berlin, Mumbai & Tokyo</span>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="#">Cookies</a>
+                    <a href="#">Legal Terms</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="social-links">
+                    <span>Connect:</span>
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">YouTube</a>
+                    <a href="#">TikTok</a>
+                    <a href="#">Pinterest</a>
+                </div>
+            </div>
+        </footer>
+
+
+</body>
+
+</html>

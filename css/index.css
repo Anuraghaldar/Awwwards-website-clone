@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Nav header */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Inter Tight", sans-serif
+}
+
+body {
+    background-color: #E9E9E9;
+}
+
+
+/* Site info details */
+
+.site-info {
+    display: flex;
+    justify-content: center !important;
+    padding: 10px;
+    font-size: 14px;
+    color: rgb(34, 34,34);
+    margin-top: 1rem;
+}
+
+.date {
+    background-color: inherit;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin: 0 5px;
+    border: 1px solid #b3b3b3;
+}
+
+.score {
+    font-weight: 500;
+}
+
+.main-title {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.main-title h1 {
+    font-size: 120px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    color: #222;
+
+}
+
+.creator-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.creator-avatar img{
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+.pro-badge {
+    background-color: #ffffff;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+/* Main image */
+
+.main-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-image img{
+    display: block;
+    margin: 30px 20px;
+    border-radius: 8px;
+    max-width: 90%;
+    box-sizing: inherit;
+}
+
+/* Nav button */
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap; 
+    white-space: nowrap;
+    overflow-x: auto; 
+    background-color: rgba(34, 34, 34, 0.8);
+    padding: 5px;
+    border-radius: 8px;
+    max-width: 700px;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-buttons__logo-button {
+    background-color: #222;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    text-decoration: none;
+    flex-shrink: 0; 
+}
+
+.nav-buttons__section-button {
+    background-color: #343434;
+    color: #dedede;
+    border: 1px solid #4d4d4d;
+    padding: 12px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 1px;
+    transition: all 0.2s;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.nav-buttons__section-button:hover{
+    border-color: #e7e4e4;
+}
+
+.nav-buttons__background {
+    background-color: #3e3e3e;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.nav-buttons__section-button.active {
+    border: 1px solid #949393;
+    color: white;
+}
+
+.nav-buttons__visit-button {
+    background-color: white;
+    color: #333;
+    border: none;
+    padding: 16px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+
+@media (max-width: 60rem) {
+    .main-title h1 {
+        font-size: 60px;
+        letter-spacing: -1px;
+    }
+}
+
+@media (max-width: 48rem) {
+    .nav-header {
+        padding: 12px 15px;
+    }
+    
+    .nav-left {
+        margin-left: 0;
+    }
+    
+    .nav-left__logo {
+        font-size: 20px;
+        margin-right: 15px;
+    }
+    
+    .be-pro, 
+    .submit-website {
+        display: none !important;
+    }
+    
+    .nav-header__search-bar {
+        min-width: 200px;
+    }
+    
+    .mobile-search-icon {
+        display: block !important;
+        margin-left: auto;
+        margin-right: 15px;
+        cursor: pointer;
+    }
+    
+    .nav-right {
+        margin-right: 0;
+        gap: 10px;
+    }
+    
+    .login, .signup {
+        font-size: 14px;
+        padding: 6px 0;
+    }
+
+    .nav-buttons{
+        display: none;
+    }
+}

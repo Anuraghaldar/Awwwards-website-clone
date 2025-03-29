@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market</title>
+    <link rel="stylesheet" href="/css/share.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/market/market.css">
+    <link rel="stylesheet" href="/css/market/market-grid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="/js/login.js" defer></script>
+    <script src="/js/index.js" defer></script>
+    <script src="/js/filter.js" defer></script>
+</head>
+
+<body>
+    <div class="backdrop" id="loginBackdrop"></div>
+    <div class="login-modal" id="loginModal">
+        <div class="login">
+            <div class="login-container">
+                <div class="welcome-section">
+                    <div class="welcome">
+                        Welcome!
+                    </div>
+                    <div class="logo-smiley">
+                        <div class="logo">W.</div>
+                        <div class="smiley">
+                            <i class="fa fa-smile-o" style="font-size:8rem;color:rgb(13, 105, 51)"></i>
+                        </div>
+                    </div>
+                    <div class="welcome-register-link">
+                        <span>Not a member yet? </span>
+                        Register now
+                    </div>
+                </div>
+
+                <div class="login-section">
+                    <form class="login-form">
+                        <h2>Log in</h2>
+                        <label for="form-text__field">EMAIL OR USERNAME</label>
+                        <input type="text" id="form-text__field" placeholder="EMAIL OR USERNAME">
+                        <label for="form-text__password">PASSWORD</label>
+                        <input type="password" id="form-text__password" placeholder="PASSWORD">
+
+                        <div class="keep-logged">
+                            <input type="checkbox" id="keepLoggedIn">
+                            <label for="keepLoggedIn">Keep me logged in</label>
+                        </div>
+                        <button type="submit" class="login-button">
+                            Log in now
+                        </button>
+                        <div class="login-forgot-password">
+                            Forgot your password?
+                        </div>
+                        <div class="login-or-signin">
+                            or signin with
+                        </div>
+
+                        <div class="social-login">
+                            <button type="button"><i class="fab fa-google"></i> Google</button>
+                            <button type="button"><i class="fab fa-facebook"></i> Facebook</button>
+                            <button type="button"><i class="fab fa-twitter"></i> Twitter</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main nav header -->
+    <div>
+        <nav class="nav-header">
+            <div class="nav-left">
+                <button class="toggle-button">
+                    <span class="toggle-button__bar"></span>
+                    <span class="toggle-button__bar"></span>
+                    <span class="toggle-button__bar"></span>
+                </button>
+                <div class="nav-left__logo">
+                    <a href="/page/index.html">W.</a>
+                </div>
+                <div class="nav-left__links">
+                    <div class="nav-header-main__item">
+                        <span class="nav-header-main__link">
+                            Explore
+                            <span class="nav-header-main__link--arrow"><i class="fa fa-angle-down"></i></span>
+                        </span>
+                    </div>
+                    <div class="nav-header-main__item">
+                        <a class="nav-header-main__link" href="#">Directory</a>
+                    </div>
+                    <div class="nav-header-main__item">
+                        <a class="nav-header-main__link" href="#">
+                            Academy
+                            <span class="nav-left__budget-tag budget-tag__shiny anim-shiny">New</span>
+                        </a>
+                    </div>
+                    <div class="nav-header-main__item">
+                        <a class="nav-header-main__link" href="#">Jobs</a>
+                    </div>
+                    <div class="nav-header-main__item">
+                        <a class="nav-header-main__link" href="#">Market</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-header__search-bar">
+                <i class="fas fa-search nav-header__search-icon"></i>
+                <input type="text" placeholder="Search by inspiration">
+            </div>
+            <div class="nav-right">
+                <a href="#" class="login"><span class="login-user-icon"><i class="fa-regular fa-user"></i></span> Log
+                    In</a>
+                <a href="#" class="signup">Sign Up</a>
+                <a href="#" class="be-pro">Be Pro</a>
+                <a href="#" class="submit-website">Submit Website</a>
+            </div>
+        </nav>
+    </div>
+    <!-- side hamburger popup -->
+
+    <div class="menu-hamburger">
+        <div class="menu-container">
+            <div class="menu-container-item">
+                <div class="menu-item menu-item-dark">
+                    <span>Explore</span>
+                </div>
+                <div class="menu-item">
+                    <span>Awards</span>
+                    <span class="menu-item-expand"><i class="fa fa-angle-down"></i></span>
+                </div>
+                <div class="menu-item">
+                    <span>By Category</span>
+                    <span class="menu-item-expand"><i class="fa fa-angle-down"></i></span>
+                </div>
+                <div class="menu-item">
+                    <span>By Technology</span>
+                    <span class="menu-item-expand"><i class="fa fa-angle-down"></i></span>
+                </div>
+                <div class="menu-item">
+                    <span>Collections</span>
+                    <span class="menu-item-expand"><i class="fa fa-angle-down"></i></span>
+                </div>
+                <div class="menu-item menu-item-dark">
+                    <span>Blog</span>
+                </div>
+                <div class="menu-item menu-item-dark">
+                    <span>Directory</span>
+                </div>
+                <div class="menu-item menu-item-dark">
+                    <span>Academy</span>
+                    <span class=" nav-left__budget-tag budget-tag__shiny anim-shiny">New</span>
+                </div>
+                <div class="menu-item menu-item-dark">
+                    <span>Jobs</span>
+                </div>
+                <div class="menu-item menu-item-dark">
+                    <span>Market</span>
+                </div>
+            </div>
+            <div class="menu-item-icon">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-tiktok"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-bottom">
+        <div class="header-bottom__left">
+            <button class="header-bottom__left-category">Category <i class="fa fa-angle-down"></i></button>
+            <button class="header-bottom__left-platform">Platform <i class="fa fa-angle-down"></i></button>
+        </div>
+        <div class="header-bottom__right-none">
+            <div class="header-bottom__right">
+                <button class="header-bottom__right-count">0</button>
+                <button class="header-bottom__right-reset">
+                    Reset Filters
+                    <svg class="ico-svg ico--right" width="15" height="16" viewBox="0 0 15 16">
+                        <path
+                            d="M9.54947 0H4.63158C2.08842 0 0 2.07158 0 4.63158V8.67368C0 9.04421 0.303158 9.34737 0.673684 9.34737C1.04421 9.34737 1.34737 9.04421 1.34737 8.67368V4.63158C1.34737 2.82947 2.81263 1.36421 4.61474 1.36421H9.51579C11.3516 1.36421 12.8168 2.82947 12.8168 4.63158V8.16842C12.8168 9.97053 11.3516 11.4358 9.54947 11.4358H3.46947L5.50737 9.39789C5.77684 9.12842 5.77684 8.70737 5.50737 8.43789C5.23789 8.16842 4.81684 8.16842 4.54737 8.43789L1.34737 11.6379C1.07789 11.9074 1.07789 12.3284 1.34737 12.5979L4.54737 15.7979C4.68211 15.9326 4.85053 16 5.03579 16C5.20421 16 5.38947 15.9326 5.52421 15.7979C5.79368 15.5284 5.79368 15.1074 5.52421 14.8379L3.46947 12.8H9.54947C12.1095 12.8 14.1811 10.7284 14.1811 8.16842V4.63158C14.1811 2.07158 12.0926 0 9.54947 0Z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Arrow button scroll -->
+    <button class="scroll-arrow"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <!-- Filter Category and Platform -->
+
+    <div class="category">
+        <div class="category-scroll">
+            <div>
+                <input type="radio" id="homeware" name="category-radio" value="homeware">
+                <label for="homeware">Homeware</label><br>
+            </div>
+            <div>
+                <input type="radio" id="digital-product" name="category-radio" value="digital-product">
+                <label for="digital-product">Digital Product</label><br>
+            </div>
+            <div>
+                <input type="radio" id="font" name="category-radio" value="font">
+                <label for="font">Font</label><br>
+            </div>
+            <div>
+                <input type="radio" id="product" name="category-radio" value="product">
+                <label for="product">Product</label><br>
+            </div>
+            <div>
+                <input type="radio" id="apptool" name="category-radio" value="apptool">
+                <label for="app-tool">App & Tool</label><br>
+            </div>
+            <div>
+                <input type="radio" id="utilitary" name="category-radio" value="utilitary">
+                <label for="utilitary">Utilitary</label><br>
+            </div>
+            <div>
+                <input type="radio" id="apparel" name="category-radio" value="apparel">
+                <label for="apparel">Apparel</label><br>
+            </div>
+            <div>
+                <input type="radio" id="Editorial" name="category-radio" value="Editorial">
+                <label for="Editorial">Editorial</label><br>
+            </div>
+            <div>
+                <input type="radio" id="plugin" name="category-radio" value="plugin">
+                <label for="plugin">Plugin</label><br>
+            </div>
+            <div>
+                <input type="radio" id="hardware" name="category-radio" value="hardware">
+                <label for="hardware">Hardware</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="Platform-popup">
+        <div class="platform-scroll">
+            <div>
+                <input type="radio" id="webflow" name="platform-radio" value="webflow">
+                <label for="webflow">Webflow</label><br>
+            </div>
+            <div>
+                <input type="radio" id="framer" name="platform-radio" value="framer">
+                <label for="framer">Framer</label><br>
+            </div>
+            <div>
+                <input type="radio" id="wordpress" name="platform-radio" value="wordpress">
+                <label for="wordpress">Wordpress</label><br>
+            </div>
+            <div>
+                <input type="radio" id="figma" name="platform-radio" value="figma">
+                <label for="figma">Figma</label><br>
+            </div>
+            <div>
+                <input type="radio" id="Photoshop" name="platform-radio" value="Photoshop">
+                <label for="Photoshop">Photoshop</label><br>
+            </div>
+            <div>
+                <input type="radio" id="Tailwind" name="platform-radio" value="Tailwind">
+                <label for="Tailwind">Tailwind</label><br>
+            </div>
+            <div>
+                <input type="radio" id="afterEffect" name="platform-radio" value="afterEffect">
+                <label for="afterEffect">After Effects</label><br>
+            </div>
+            <div>
+                <input type="radio" id="davinci" name="platform-radio" value="davinci">
+                <label for="davinci">DaVinci</label><br>
+            </div>
+            <div>
+                <input type="radio" id="shopify" name="platform-radio" value="shopify">
+                <label for="shopify">Shopify</label><br>
+            </div>
+            <div>
+                <input type="radio" id="premiere" name="platform-radio" value="premiere">
+                <label for="premiere">Premiere</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Market section -->
+
+    <div class="market-section ">
+        <div class="latest">
+            <h5>Smart Selection</h5>
+        </div>
+
+        <h1 class="market-section__title">
+            MARKET
+        </h1>
+
+        <div class="market-section__subheading">
+            Curated products selected for digital<br>
+            <div>design professionals like you.</div>
+        </div>
+        <div class="market-section__discovery-none">
+            <div class="market-section__discovery">
+                <div>Discover specially curated products.</div>
+                <div class="market-section__underline">Learn more about market</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- nav buttons -->
+
+    <div class="nav-buttons">
+        <a href="/page/index.html" class="nav-buttons__logo-button"> W.</a>
+        <button class="nav-buttons__visit-button">Submit Product</button>
+    </div>
+
+    <!-- market header image -->
+    <div class="market-header-temp">
+        <div class="market-temp__img">
+            <img src="/assets/home-market-image/1stmarket.jpg" alt="1stmarket" class="market-image">
+        </div>
+        <div class="market-temp__img">
+            <img src="/assets/home-market-image/2ndmarket.jpg" alt="2nd market" class="market-image">
+        </div>
+    </div>
+
+    
+    <div class="market-grid">
+        <!-- 1 card -->
+        <div class="market-card">
+            <img src="/assets/market-grid-image/1stgrid.png" alt="market" class="market-image">
+            <div class="market-title">
+                <div class="market-title__first">Digital Product</div>
+                <div class="market-title__second">Arpeggio° — Digital Product Agency Template</div>
+            </div>
+            <div class="market-author-price">
+                <div class="market-author"><span class="market-author__by">By</span> Tamas Bodo</div>
+                <div class="market-price">
+                    <div class="market-price__from">from</div>
+                    <div class="market-price__amount">
+                        $69
+                    </div>
+                    <div class="market-price__usd">USD</div>
+                </div>
+            </div>
+            <div class="view-market">
+                <div class="view-market__product">View Product</div>
+                <div>→</div>
+            </div>
+        </div>
+        <div class="market-card">
+            <!-- card 2 -->
+            <img src="/assets/market-grid-image/2ndgrid.jpg" alt="market" class="market-image">
+            <div class="market-title">
+                <div class="market-title__first">Homeware</div>
+                <div class="market-title__second">RESCALE — SaaS Landing Page Framer Template</div>
+            </div>
+            <div class="market-author-price">
+                <div class="market-author"><span class="market-author__by">By</span> Tamas Bodo</div>
+                <div class="market-price">
+                    <div class="market-price__from">from</div>
+                    <div class="market-price__amount">
+                        $79
+                    </div>
+                    <div class="market-price__usd">USD</div>
+                </div>
+            </div>
+            <div class="view-market">
+                <div class="view-market__product">View Product</div>
+                <div>→</div>
+            </div>
+        </div>
+        <div class="market-card">
+            <!-- card 3 -->
+            <img src="/assets/market-grid-image/3rdgrid.png" alt="market" class="market-image">
+            <div class="market-title">
+                <div class="market-title__first">Product</div>
+                <div class="market-title__second">Systematic — Framer Documentation Template</div>
+            </div>
+            <div class="market-author-price">
+                <div class="market-author"><span class="market-author__by">By</span> Tamas Bodo</div>
+                <div class="market-price">
+                    <div class="market-price__from">from</div>
+                    <div class="market-price__amount">
+                        $49
+                    </div>
+                    <div class="market-price__usd">USD</div>
+                </div>
+            </div>
+            <div class="view-market">
+                <div class="view-market__product">View Product</div>
+                <div>→</div>
+            </div>
+        </div>
+        <div class="market-card">
+            <!-- card 4 -->
+            <img src="/assets/market-grid-image/4thgrid.jpg" alt="market" class="market-image">
+            <div class="market-title">
+                <div class="market-title__first">Product</div>
+                <div class="market-title__second">Captured — Photography Framer Template</div>
+            </div>
+            <div class="market-author-price">
+                <div class="market-author"><span class="market-author__by">By</span> Tamas Bodo</div>
+                <div class="market-price">
+                    <div class="market-price__from">from</div>
+                    <div class="market-price__amount">
+                        $69
+                    </div>
+                    <div class="market-price__usd">USD</div>
+                </div>
+            </div>
+            <div class="view-market">
+                <div class="view-market__product">View Product</div>
+                <div>→</div>
+            </div>
+        </div>
+        <div class="market-card">
+            <!-- card 5 -->
+            <img src="/assets/market-grid-image/5thgrid.jpg" alt="market" class="market-image">
+            <div class="market-title">
+                <div class="market-title__first">Font</div>
+                <div class="market-title__second">Captured — Photography Framer Template</div>
+            </div>
+            <div class="market-author-price">
+                <div class="market-author"><span class="market-author__by">By</span> Tamas Bodo</div>
+                <div class="market-price">
+                    <div class="market-price__from">from</div>
+                    <div class="market-price__amount">
+                        $79
+                    </div>
+                    <div class="market-price__usd">USD</div>
+                </div>
+            </div>
+            <div class="view-market">
+                <div class="view-market__product">View Product</div>
+                <div>→</div>
+            </div>
+        </div>
+        <div class="market-card">
+            <!-- card 6 -->
+            <img src="/assets/market-grid-image/6thgrid.jpg" alt="market" class="market-image">
+            <div class="market-title">
+                <div class="market-title__first">Apparel</div>
+                <div class="market-title__second">Captured — Photography Framer Template</div>
+            </div>
+            <div class="market-author-price">
+                <div class="market-author"><span class="market-author__by">By</span> Tamas Bodo</div>
+                <div class="market-price">
+                    <div class="market-price__from">from</div>
+                    <div class="market-price__amount">
+                        $89
+                    </div>
+                    <div class="market-price__usd">USD</div>
+                </div>
+            </div>
+            <div class="view-market">
+                <div class="view-market__product">View Product</div>
+                <div>→</div>
+            </div>
+        </div>
+        <div class="market-card">
+            <!-- card 7 -->
+            <img src="/assets/market-grid-image/7thgrid.png" alt="market" class="market-image">
+            <div class="market-title">
+                <div class="market-title__first">Digital Product</div>
+                <div class="market-title__second">Captured — Photography Framer Template</div>
+            </div>
+            <div class="market-author-price">
+                <div class="market-author"><span class="market-author__by">By</span> Tamas Bodo</div>
+                <div class="market-price">
+                    <div class="market-price__from">from</div>
+                    <div class="market-price__amount">
+                        $69
+                    </div>
+                    <div class="market-price__usd">USD</div>
+                </div>
+            </div>
+            <div class="view-market">
+                <div class="view-market__product">View Product</div>
+                <div>→</div>
+            </div>
+        </div>
+        <div class="market-card">
+            <!-- card 8 -->
+            <img src="/assets/market-grid-image/8thgrid.png" alt="market" class="market-image">
+            <div class="market-title">
+                <div class="market-title__first">Hardware</div>
+                <div class="market-title__second">Captured — Photography Framer Template</div>
+            </div>
+            <div class="market-author-price">
+                <div class="market-author"><span class="market-author__by">By</span> Tamas Bodo</div>
+                <div class="market-price">
+                    <div class="market-price__from">from</div>
+                    <div class="market-price__amount">
+                        $49
+                    </div>
+                    <div class="market-price__usd">USD</div>
+                </div>
+            </div>
+            <div class="view-market">
+                <div class="view-market__product">View Product</div>
+                <div>→</div>
+            </div>
+        </div>
+        <div class="market-card">
+            <!-- card 9 -->
+            <img src="/assets/market-grid-image/9thgrid.jpg" alt="market" class="market-image">
+            <div class="market-title">
+                <div class="market-title__first">Homeware</div>
+                <div class="market-title__second">Captured — Photography Framer Template</div>
+            </div>
+            <div class="market-author-price">
+                <div class="market-author"><span class="market-author__by">By</span> Tamas Bodo</div>
+                <div class="market-price">
+                    <div class="market-price__from">from</div>
+                    <div class="market-price__amount">
+                        $59
+                    </div>
+                    <div class="market-price__usd">USD</div>
+                </div>
+            </div>
+            <div class="view-market">
+                <div class="view-market__product">View Product</div>
+                <div>→</div>
+            </div>
+        </div>
+        <div class="market-card">
+            <!-- card 10 -->
+            <img src="/assets/market-grid-image/10thgrid.jpg" alt="market" class="market-image">
+            <div class="market-title">
+                <div class="market-title__first">Hardware</div>
+                <div class="market-title__second">Captured — Photography Framer Template</div>
+            </div>
+            <div class="market-author-price">
+                <div class="market-author"><span class="market-author__by">By</span> Tamas Bodo</div>
+                <div class="market-price">
+                    <div class="market-price__from">from</div>
+                    <div class="market-price__amount">
+                        <div class="market-price__amount">
+                            $79
+                        </div>
+                    </div>
+                    <div class="market-price__usd">USD</div>
+                </div>
+            </div>
+            <div class="view-market">
+                <div class="view-market__product">View Product</div>
+                <div>→</div>
+            </div>
+        </div>
+        <div class="market-card">
+            <!-- card 11 -->
+            <img src="/assets/market-grid-image/11thgrid.jpg" alt="market" class="market-image">
+            <div class="market-title">
+                <div class="market-title__first">Digital Product</div>
+                <div class="market-title__second">Captured — Photography Framer Template</div>
+            </div>
+            <div class="market-author-price">
+                <div class="market-author"><span class="market-author__by">By</span> Tamas Bodo</div>
+                <div class="market-price">
+                    <div class="market-price__from">from</div>
+                    <div class="market-price__amount">
+                        <div class="market-price__amount">
+                            $89
+                        </div>
+                    </div>
+                    <div class="market-price__usd">USD</div>
+                </div>
+            </div>
+            <div class="view-market">
+                <div class="view-market__product">View Product</div>
+                <div>→</div>
+            </div>
+        </div>
+        <div class="market-card">
+            <!-- card 12 -->
+            <img src="/assets/market-grid-image/12thgrid.png" alt="market" class="market-image">
+            <div class="market-title">
+                <div class="market-title__first">Digital Product</div>
+                <div class="market-title__second">Captured — Photography Framer Template</div>
+            </div>
+            <div class="market-author-price">
+                <div class="market-author"><span class="market-author__by">By</span> Tamas Bodo</div>
+                <div class="market-price">
+                    <div class="market-price__from">
+                        from
+                    </div>
+                    <div class="market-price__amount">
+                        <div class="market-price__amount">
+                            $79
+                        </div>
+                    </div>
+                    <div class="market-price__usd">USD</div>
+                </div>
+            </div>
+            <div class="view-market">
+                <div class="view-market__product">View Product</div>
+                <div>→</div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-------------- FOOTER ------------------>
+    <footer class="footer">
+        <div class="logo">W.</div>
+
+        <div class="footer-top">
+            <div class="footer-items">
+                <a href="#">Websites</a>
+                <a href="#">Collections</a>
+                <a href="#">Elements</a>
+            </div>
+            <div class="footer-items">
+                <a href="#">Academy</a>
+                <a href="#">Jobs</a>
+                <a href="#">Market</a>
+            </div>
+            <div class="footer-items">
+                <a href="#">Directory</a>
+                <a href="#">Conferences</a>
+            </div>
+            <div class="footer-items">
+                <a href="#">FAQs</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+            </div>
+
+            <div class="next-conference">
+                Next Conference: <img src="/assets/footer/calendar.png" alt="calender">
+                <span>Berlin, Mumbai & Tokyo</span>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <div class="social-links">
+                <a href="#">Cookies</a>
+                <a href="#">Legal Terms</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="social-links">
+                <span>Connect:</span>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+                <a href="#">TikTok</a>
+                <a href="#">Pinterest</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
